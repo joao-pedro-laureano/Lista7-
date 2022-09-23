@@ -1,5 +1,21 @@
 ﻿public static class Exercicios
+
 {
+    //var c = Exercicios.CalculaMedia(4, 6, 7, 5, 3, 1, 4);
+    //var s = Exercicios.Somar(4, 6, 7, 5, 3, 1, 4);
+    public static int CalculaMedia(params int[] valores)
+    {
+        return valores.Sum() / valores.Length;
+    }
+    public static int Somar(params int[] valores)
+    {
+        return valores.Sum();
+    }
+
+    public static int Maior(params int[] valores)
+    {
+        return valores.Max();
+    }
     public static void Exercicio1()
     {
         double a, b;
@@ -198,24 +214,181 @@
     }
     public static void Exercicio14()
     {
-        int a, b, newb, newa;
+        int a, b;
         Console.WriteLine("Digite 2 valores inteiros: ");
         a = int.Parse(Console.ReadLine());
         b = int.Parse(Console.ReadLine());
+        if(a > b)
+        {
+            Console.WriteLine(a - b);
+        }
+        if (a < b)
+        {
+            Console.WriteLine(b - a);
+        }
     }
-
-    public static int CalculaMedia(params int[] valores)
+    public static void Exercicio15()
     {
-        return valores.Sum() / valores.Length;
+        double n1, n2, n3, n4, nr;
+        Console.WriteLine("Digite sua n1:");
+        n1 = int.Parse(Console.ReadLine());
+        Console.WriteLine("Digite sua n2:");
+        n2 = int.Parse(Console.ReadLine());
+        Console.WriteLine("Digite sua n3:");
+        n3 = int.Parse(Console.ReadLine());
+        Console.WriteLine("Digite sua n4:");
+        n4 = int.Parse(Console.ReadLine());
+        var media = (n1 + n2 + n3 + n4) / 4;
+        
+        if (media >= 7)
+        {
+            Console.WriteLine($"Sua média foi {media}. Está aprovado!");
+        }
+        else Console.WriteLine($"Sua média foi {media}. Está de recuperação !!! \n \nQual foi o valor de sua prova de recuperação ?");
+        nr = int.Parse(Console.ReadLine());
+        var newmedia = (nr + media) / 2;
+        if (newmedia > 7)
+        {
+            Console.WriteLine($"Sua média da recuperação foi {media}. Está aprovado!");
+        }
+        else Console.WriteLine($"Sua média com a recuperação foi {media}. Está reprovado !!");
     }
-
-    public static int Somar(params int[] valores)
+    public static void Exercicio16()
     {
-        return valores.Sum();
+        int a, b;
+        Console.WriteLine("Digite 2 valores inteiros: ");
+        a = int.Parse(Console.ReadLine());
+        b = int.Parse(Console.ReadLine());
+        if (a > b)
+        {
+            Console.WriteLine("O maior número é: " + a);
+        }
+        if (a < b)
+        {
+            Console.WriteLine("O maior número é: " + b);
+        }
+        if (a == b)
+        {
+            Console.WriteLine("Os números são iguais!");
+        }
     }
-
-    public static int Maior(params int[] valores)
+    public static void Exercicio17()
     {
-        return valores.Max();
+        int a;
+        Console.WriteLine("Digite 1 valor inteiro: ");
+        a = int.Parse(Console.ReadLine());
+        if (a >= 0 && a <= 9)
+        {
+            Console.WriteLine("O número é válido!");
+        }
+        else Console.WriteLine("O número não válido!");
+    }
+    public static void Exercicio18()
+    {
+        string r;
+        Console.WriteLine("Escreva um código");
+        int c = int.Parse(Console.ReadLine());
+        switch (c)
+        {
+            case 1 :
+                    r = "um";
+                break;
+            case 2:
+                r = "dois";
+                break;
+            case 3:
+                r = "três";
+                break;
+                default : r = "Esse código é inválido";
+                break;
+        }
+        Console.WriteLine(r);
+    }
+    public static void Exercicio19()
+    {
+        double a, b, c;
+        Console.WriteLine("Digite os 3 lados do triângulo: ");
+        a = int.Parse(Console.ReadLine());
+        b = int.Parse(Console.ReadLine());
+        c = int.Parse(Console.ReadLine());
+        
+        if(a < (b+c) && b < (a + c) && c < (a + b))
+        {
+            if(a==b && b==c)
+            {
+                Console.WriteLine("O triângulo é equilátero!");
+            }
+            else if (a == b || b == c)
+            {
+                Console.WriteLine("O triângulo é isóceles!");
+            }
+            else
+            {
+                Console.WriteLine("O triângulo é escaleno!");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Triângulo indispoível!");
+        }
+    }
+    public static void Exercicio20()
+    {
+        double a, b, c,maior, menor;
+        var lista = new List<double>();
+        do
+        {
+            Console.WriteLine("Digite 3 valores");
+
+            lista.Add(a = double.Parse(Console.ReadLine()));
+            lista.Add(b = double.Parse(Console.ReadLine()));
+            lista.Add(c = double.Parse(Console.ReadLine()));
+            maior = lista.Max();
+            menor = lista.Min();
+        }while(a <= 0 || b <= 0 || c <= 0);
+        double div = maior / menor;
+        Console.WriteLine($"O menor vezes o maior {maior * menor}");
+        Console.WriteLine("O maior dividido pelo maior " + div);
+    }
+    public static void Exercicio21()
+    {
+        string a;
+        Console.WriteLine("Digite os valores");
+        do
+        {
+            a = Console.ReadLine();
+            if(int.Parse(a) > 0)
+            {
+                Console.WriteLine("Positivo");
+            }
+            if (int.Parse(a) < 0)
+            {
+                Console.WriteLine("Negativo");
+            }
+        } while (a != "pare");
+    }
+    public static void Exercicio22()
+    {
+        var lista = new List<int>();
+        var lista2 = new List<int>();
+        string a;
+        Console.WriteLine("Digite os valores");
+        do
+        {
+            a = Console.ReadLine();
+            if (int.Parse(a) > 0)
+            {
+                lista.Add(int.Parse(a));
+            }
+            if (int.Parse(a) < 0)
+            {
+                lista2.Add(int.Parse(a));
+            }
+        } while (a != "pare");
+        
+        foreach (int a in lista)
+        {
+            Console.WriteLine(a);
+        }
     }
 }

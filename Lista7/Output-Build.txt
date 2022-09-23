@@ -1,0 +1,10 @@
+﻿Build started...
+1>------ Build started: Project: Lista7, Configuration: Debug Any CPU ------
+1>Skipping analyzers to speed up the build. You can execute 'Build' or 'Rebuild' command to run analyzers.
+1>C:\Users\joaop\source\repos\joao-pedro-laureano\Lista7-\Lista7\Class1.cs(60,48,60,53): warning CS0219: The variable 'auton' is assigned but its value is never used
+1>C:\Users\joaop\source\repos\joao-pedro-laureano\Lista7-\Lista7\Class1.cs(145,13,145,14): warning CS0219: The variable 'a' is assigned but its value is never used
+1>C:\Users\joaop\source\repos\joao-pedro-laureano\Lista7-\Lista7\Class1.cs(145,20,145,21): warning CS0219: The variable 'b' is assigned but its value is never used
+1>C:\Users\joaop\source\repos\joao-pedro-laureano\Lista7-\Lista7\Class1.cs(145,27,145,28): warning CS0219: The variable 'c' is assigned but its value is never used
+1>Lista7 -> C:\Users\joaop\source\repos\joao-pedro-laureano\Lista7-\Lista7\bin\Debug\net6.0\Lista7.dll
+1>Done building project "Lista7.csproj".
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========

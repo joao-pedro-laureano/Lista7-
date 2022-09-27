@@ -378,16 +378,31 @@
     public static void Exercicio23()
     {
         int a, b;
-        string A, r, c, d, e;
+        string A;
 
         Console.WriteLine("Escreva 2 números");
         a = int.Parse(Console.ReadLine());
         b = int.Parse(Console.ReadLine());
         Console.WriteLine("Escreva oque realiza fazer: ");
-        
-
+        A = Console.ReadLine();
+        if(A == "*")
+        {
+            Console.WriteLine(a*b);
+        }
+        if (A == "+")
+        {
+            Console.WriteLine(a + b);
+        }
+        if (A == "-")
+        {
+            Console.WriteLine(a - b);
+        }
+        if (A == "/")
+        {
+            Console.WriteLine(a / b);
+        }
     }
-    public static void Exercicio24() //revisar
+    public static void Exercicio24() 
     {
         int a, b;
         string A, r, c, d, e;
@@ -633,6 +648,163 @@
         Console.WriteLine("O maior é: " + maior);
         Console.WriteLine("O menor é: " + menor);
         Console.WriteLine("A média dos valores é: " + soma / b);
+    }
+    public static void Exercicio37()
+    {
+        int a, b, d, c;
+        string r;
+        do
+        {
+            Console.WriteLine("1 – Adição \n2 – Subtração \n3 – Multiplicação \n4 – Divisão");
+            c = int.Parse(Console.ReadLine());
+            Console.WriteLine("Digite 2 números: ");
+            a = int.Parse(Console.ReadLine());
+            b = int.Parse(Console.ReadLine());
+            if (c == 1)
+            {
+                Console.WriteLine(a + b);
+            }
+            if (c == 2)
+            {
+                Console.WriteLine(a - b);
+            }
+            if (c == 3)
+            {
+                Console.WriteLine(a * b);
+            }
+            if (c == 4)
+            {
+                Console.WriteLine(a / b);
+            }
+            Console.WriteLine("Deseja continuar?");
+            r = Console.ReadLine();  
+        } while (r == "s" || r == "S");
+    }
+    public static void Exercicio38()
+    {
+        int C, N = 0, E = 0;
+        string r;
+        do
+        {
+            Console.WriteLine("Digite o código do funcionário: ");
+            Console.ReadLine();
+            Console.WriteLine("Digite suas horas trabalhadas:");
+            C = int.Parse(Console.ReadLine());
+            if (C >= 50)
+            {
+                E = (C - 50) * 20;
+            }
+            if (C >= 50)
+            {
+                N = 50 * 10;
+            }
+            if (C < 50)
+            {
+                N = C * 10;
+            }
+            Console.WriteLine($"Seu salário total é de {E+N} reais. \nE o valor de seu trabalho exenente é de {E} reais. \n");
+            
+            Console.WriteLine("Deseja continuar?");
+            r = Console.ReadLine();
+        } while (r == "s" || r == "S");
+    }
+    public static void Exercicio39()
+    {
+        int C, N = 0, E = 0;
+        string r;
+        do
+        {
+            Console.WriteLine("Digite um número: ");
+            C = int.Parse(Console.ReadLine());
+            if (C % 2 == 0)
+            {
+                Console.WriteLine("O número é par");
+            }
+            else Console.WriteLine("O número não é par");
+
+            if (C < 0)
+            {
+                Console.WriteLine("O número é negativo\n");
+            }
+            if (C > 0)
+            {
+                Console.WriteLine("O número é positivo\n");
+            }
+            Console.WriteLine("Deseja continuar?");
+            r = Console.ReadLine();
+        } while (r == "s" || r == "S");
+    }
+    public static void Exercicio40() //revisar
+    {
+        double a;
+        string r;
+        do
+        {
+            Console.WriteLine("Digite o índice médio da poluição: ");
+            a = double.Parse(Console.ReadLine());
+            if (a >= 0.5)
+            {
+                Console.WriteLine("O 1º, 2º e 3º grupo devem suspender as atividades");
+            }
+            else if (a >= 0.4)
+            {
+                Console.WriteLine("O 1º e 2º grupo devem suspender as atividades");
+            }           
+            else if (a >= 0.3)
+            {
+                Console.WriteLine("O 1º grupo deve suspender as atividades");
+            }
+            else Console.WriteLine("Está dentro da média!");
+            Console.WriteLine("Deseja continuar?");
+            r = Console.ReadLine();
+        } while (r == "s" || r == "S");
+    }
+    public static void Exercicio41()
+    {
+        int a;
+        Console.WriteLine("Digite a idade da criança para consultar a turma de natação");
+        a = int.Parse(Console.ReadLine());  
+        if(a >= 5 && a <= 7)
+        {
+            Console.WriteLine("Infantil A");
+        }
+        if (a >= 8 && a <= 11)
+        {
+            Console.WriteLine("Infantil B");
+        }
+        if (a >= 12 && a <= 13)
+        {
+            Console.WriteLine("Juvenil A");
+        }
+        if (a >= 14 && a <= 17)
+        {
+            Console.WriteLine("Juvenil B");
+        }
+        if (a >= 18)
+        {
+            Console.WriteLine("Adultos");
+        }
+    }
+    public static void Exercicio42()
+    {
+        int a, maior, menor;
+
+        Console.WriteLine("Digite  valores");
+        a = int.Parse(Console.ReadLine());
+        maior = a;
+        menor = maior;
+        do
+        {
+            a = int.Parse(Console.ReadLine());
+
+            if (a > maior) maior = a;
+            if (a < menor && a != 0) menor = a;
+        } while (a != 0);
+        Console.WriteLine($"O maior é {maior}, e o menor é {menor}.");
+    }
+    public static void Exercicio43()
+    {
+
     }
 }
 

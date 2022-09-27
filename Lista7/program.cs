@@ -1,2 +1,2 @@
 ﻿
-Exercicios.Exercicio22();
+Exercicios.Exercicio24();

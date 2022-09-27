@@ -369,26 +369,270 @@
     }
     public static void Exercicio22()
     {
-        var lista = new List<int>();
-        var lista2 = new List<int>();
-        string a;
-        Console.WriteLine("Digite os valores");
+        int a;
+        Console.WriteLine("Digite um número");
+        a = int.Parse(Console.ReadLine());
+        if (a > 0) Console.WriteLine("O número: " + a + " foi armazenado em a");
+        else Console.WriteLine("O número " + a + " foi armazenado em b");
+    }
+    public static void Exercicio23()
+    {
+        int a, b;
+        string A, r, c, d, e;
+
+        Console.WriteLine("Escreva 2 números");
+        a = int.Parse(Console.ReadLine());
+        b = int.Parse(Console.ReadLine());
+        Console.WriteLine("Escreva oque realiza fazer: ");
+        
+
+    }
+    public static void Exercicio24() //revisar
+    {
+        int a, b;
+        string A, r, c, d, e;
+
+        Console.WriteLine("Escreva 2 números");
+        a = int.Parse(Console.ReadLine());
+        b = int.Parse(Console.ReadLine());
+        Console.WriteLine("Escreva oque realiza fazer entra as opções: \n" +
+            "1 – Verificar se um dos números lidos é ou não múltiplo do outro \n" +
+            "2 – Verificar se os dois números lidos são pares \n" +
+            "3 – Verificar se a média dos dois números é maior ou igual a 7. \n" +
+            "4 – Sair ");
         do
         {
-            a = Console.ReadLine();
-            if (int.Parse(a) > 0)
+            A = Console.ReadLine();
+            if (a % b == 0 && b % a == 0)
             {
-                lista.Add(int.Parse(a));
+                c = ($"Número {a} é multiplo do número {b} ou vice versa!");
             }
-            if (int.Parse(a) < 0)
+            else c = ($"Número {a} não é multiplo do número {b} ou vice versa!");
+            if (a % 2 == 0)
             {
-                lista2.Add(int.Parse(a));
+                d = ($"O número {a} é par.");
             }
-        } while (a != "pare");
-        
-        foreach (int a in lista)
+            if (b % 2 == 0)
+            {
+                d = ($"O número {b} é par.");
+            }
+            else Console.WriteLine("Ambos são ímpares!");
+            if ((a + b) / 2 >= 7)
+            {
+                e = ("A média entre os números é maior que 7");
+            }
+            else e = ("A média entre os números é menor que 7");
+            switch (int.Parse(A))
+            {
+                case 1:
+                    r = "um";
+                    break;
+                case 2:
+                    r = "dois";
+                    break;
+                case 3:
+                    r = "três";
+                    break;
+                default:
+                    r = "Esse código é inválido";
+                    break;
+            }
+
+        } while (int.Parse(A) == 4);
+    }
+    public static void Exercicio25()
+    {
+        string s;
+        double h;
+        Console.WriteLine("Escreva o seu sexo: ");
+        s = Console.ReadLine();
+        Console.WriteLine("Escreva a sua altura");
+        h = double.Parse(Console.ReadLine());
+        if (s == "Homem")
         {
-            Console.WriteLine(a);
+            Console.WriteLine("Seu peso ideal é: " + ((72.7 * h) - 58));
+        }
+        if (s == "Mulher")
+        {
+            Console.WriteLine("Seu peso ideal é: " + ((62.1 * h) - 44.7));
         }
     }
+    public static void Exercicio26()
+    {
+        for (int i = 100; i > 0; i--)
+        {
+            Console.WriteLine(i);
+        }
+    }
+    public static void Exercicio28()
+    {
+        for (int i = 1; i <= 2000; i++)
+        {
+            Console.WriteLine(i);
+        }
+    }
+    public static void Exercicio29()
+    {
+        for (int i = 100; i <= 200; i++)
+        {
+            if (i % 2 == 0)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+    public static void Exercicio30()
+    {
+        for (int i = 0; i <= 10; i++)
+        {
+            Console.WriteLine(i + "x1 = " + i*1);
+        }
+        for (int i = 0; i <= 10; i++)
+        {
+            Console.WriteLine(i + "x2 = " + i * 1);
+        }
+        for (int i = 0; i <= 10; i++)
+        {
+            Console.WriteLine(i + "x3 = " + i * 1);
+        }
+        for (int i = 0; i <= 10; i++)
+        {
+            Console.WriteLine(i + "x4 = " + i * 1);
+        }
+        for (int i = 0; i <= 10; i++)
+        {
+            Console.WriteLine(i + "x5 = " + i * 1);
+        }
+        for (int i = 0; i <= 10; i++)
+        {
+            Console.WriteLine(i + "x6 = " + i * 1);
+        }
+        for (int i = 0; i <= 10; i++)
+        {
+            Console.WriteLine(i + "x7 = " + i * 1);
+        }
+        for (int i = 0; i <= 10; i++)
+        {
+            Console.WriteLine(i + "x8 = " + i * 1);
+        }
+        for (int i = 0; i <= 10; i++)
+        {
+            Console.WriteLine(i + "x9 = " + i * 1);
+        }
+        for (int i = 0; i <= 10; i++)
+        {
+            Console.WriteLine(i + "x10 = " + i * 1);
+        }
+    }
+    public static void Exercicio31()
+    {
+        int a, somai = 0, somap = 0;
+        Console.WriteLine("Digite os números positivos");
+        do
+        {
+            a = int.Parse(Console.ReadLine());
+            if (a % 2 == 0 && a > 0)
+            {
+                Console.WriteLine("O número é par!");
+                somap = somap + a;
+            }
+            if (a % 2 != 0 && a > 0)
+            {
+                Console.WriteLine("O número é impar!");
+                somai = somai + a;
+            }
+        } while (a > 0);
+        Console.WriteLine("A soma dos números pares é: " + somap);
+        Console.WriteLine("A soma dos números impares é: " + somai);
+    }
+    public static void Exercicio32()
+    {
+        int i, a;
+        double soma = 0;
+        Console.WriteLine("Digite quantos números desejam exibir");
+        i = int.Parse(Console.ReadLine());
+        for (a = 0; a < i; a++)
+        {
+            if (a % 2 != 0)
+            {
+                soma = soma + (a*a);
+            }
+        }
+        Console.WriteLine("A soma dos quadrados dos números ímpares é: " + soma);
+    }
+    public static void Exercicio33()
+    {
+        double n, soma=0;
+        int i = 0;
+        Console.WriteLine("Digite sua matrícula");
+        Console.ReadLine();
+        Console.WriteLine("Digite as notas");
+        do
+        {
+            n =double.Parse(Console.ReadLine());
+            soma = soma + n;
+            i++;
+        } while (n >= 0);
+        Console.WriteLine("A média dos alunos é: " + soma/(i - 1));
+    }
+    public static void Exercicio34()
+    {
+        double a, maior, menor;
+        Console.WriteLine("Digite os números");
+        a = double.Parse(Console.ReadLine());
+        maior = a;
+        menor = maior;
+        do
+        {
+            a = double.Parse(Console.ReadLine());
+            if(a > maior)
+            {
+                maior = a;
+            }
+            if (a > 0 && a < menor)
+            {
+                menor = a;
+            }
+        } while (a >= 0);
+        Console.WriteLine("O maior é: " + maior);
+        Console.WriteLine("O menor é: " + menor);
+    }
+    public static void Exercicio35()
+    {
+        double a;
+        for (int i = 0; i <= 100; i++)
+        {
+            Console.WriteLine(i);
+            if (i % 10 == 0)
+            {
+                Console.WriteLine("Múltiplo de 10");
+            }
+        }
+    }
+    public static void Exercicio36()
+    {
+        double a, b = 0, maior, menor, soma = 0;
+        Console.WriteLine("Digite os números");
+        a = double.Parse(Console.ReadLine());
+        maior = a;
+        menor = maior;
+        for (int i = 1; i < 10; i++)
+        {
+            a = double.Parse(Console.ReadLine());
+            if (a > maior)
+            {
+                maior = a;
+            }
+            if (a < menor)
+            {
+                menor = a;
+            }
+            soma = soma + a;
+            b++;
+        }
+        Console.WriteLine("O maior é: " + maior);
+        Console.WriteLine("O menor é: " + menor);
+        Console.WriteLine("A média dos valores é: " + soma / b);
+    }
 }
+

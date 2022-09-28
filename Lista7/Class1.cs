@@ -831,5 +831,18 @@
         } while (rand_num != a);
         Console.WriteLine("Esse é o número");
     }
+    public static void Exercicio60()
+    {
+        int x, y;
+        Console.WriteLine("Digite os valores para X e Y:");
+        x = int.Parse(Console.ReadLine());  
+        y = int.Parse(Console.ReadLine());
+
+        if (x > 0 && y > 0) Console.WriteLine("Está no 1º quadrante!");
+        if (x > 0 && y < 0) Console.WriteLine("Está no 4º quadrante!");
+        if (x < 0 && y > 0) Console.WriteLine("Está no 2º quadrante!");
+        if (x < 0 && y < 0) Console.WriteLine("Está no 3º quadrante!");
+    }
+
 }
 

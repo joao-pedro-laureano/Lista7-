@@ -802,9 +802,34 @@
         } while (a != 0);
         Console.WriteLine($"O maior é {maior}, e o menor é {menor}.");
     }
-    public static void Exercicio43()
+    public static void Exercicio45()
     {
+        int i;
+        int[] A = new int[6];
 
+        for (i = 1; i <= 5; i++)
+        {
+            A[i] = int.Parse(Console.ReadLine());
+        }
+        for (i = 5; i >= 1; i--)
+        {
+            Console.WriteLine(A[i]);
+        }
+    }
+    public static void Exercicio50()
+    {
+        Random rd = new Random();
+        int a, rand_num = rd.Next(0, 100);
+        Console.WriteLine(rand_num);
+        do
+        {
+            Console.WriteLine("Digite um número de 1 à 100:");
+            a = int.Parse(Console.ReadLine());
+
+            if (rand_num > a) Console.WriteLine("O seu número é menor");
+            if (rand_num < a) Console.WriteLine("O seu número é maior");
+        } while (rand_num != a);
+        Console.WriteLine("Esse é o número");
     }
 }
 
